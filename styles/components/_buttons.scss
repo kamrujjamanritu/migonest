@@ -1,0 +1,70 @@
+/* ==== 
+ --------- (3.1) button styles start ---------
+ ==== */
+
+// button styles
+
+.apply-now {
+  font-family: $roboto;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding: 16px 32px;
+  color: $primary-color;
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  transition: $primary-transition;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    background-image: radial-gradient(223.28% 626.63% at 7.06% -5.17%, #FFFFFF 0%, #02547D 100%);
+    z-index: -1;
+    border-radius: 40px;
+  }
+
+  &:hover {
+    border: 3px solid transparent;
+    background-color: #f2f8fd;
+  }
+}
+
+
+.filter-btn {
+  font-family: $roboto;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 24px 8px;
+  border: 1px solid $primary-color;
+  border-radius: 30px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    color: $white;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+  }
+
+  &:active,
+  &:focus {
+    border: 1px solid $primary-color;
+  }
+}
+
+.filter-btn-active {
+  color: $white;
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+}
+
+
+/* ==== 
+     --------- (3.1) button styles end ---------
+   ==== */

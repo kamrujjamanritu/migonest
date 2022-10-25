@@ -1,0 +1,1453 @@
+/* ==== 
+ --------- (4.5) all sections styles start ---------
+ ==== */
+// apply section styles
+.apply {
+    margin-top: 60px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .apply__content {
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: $tertiary-color;
+        }
+    }
+
+    .apply__cta {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+// suggested universities section styles start
+
+.suggested,
+.viewed {
+    overflow-x: clip;
+
+    .container {
+        padding-right: 0px;
+    }
+}
+
+
+.universities__head,
+.viewed__head {
+    h2 {
+        font-family: $sf;
+        font-weight: 700;
+    }
+}
+
+.universities__buttons__inner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: $primary-transition;
+    margin-top: 20px;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.universities__items {
+    margin-top: 40px;
+    margin-bottom: -20px;
+    margin-left: -10px;
+
+    .swiper-slide {
+        width: 335px !important;
+        padding-bottom: 20px;
+    }
+
+    .swiper {
+        padding-left: 10px;
+    }
+}
+
+.universities__item {
+    width: 330px;
+    background-color: $white;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+.universities__item__thumb {
+    a {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        max-height: 200px;
+
+        img {
+            border-radius: 12px;
+        }
+    }
+}
+
+.universities__item__content {
+    h3 {
+        margin-bottom: 5px;
+        overflow: hidden;
+        text-overflow: "...";
+        white-space: nowrap;
+    }
+}
+
+.universities__item__content-wrapper {
+    padding: 16px 12px;
+}
+
+.universities__item__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    p {
+        margin: 0px;
+    }
+
+    .location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .tag,
+    .private {
+        background: #bbe0ff;
+        border-radius: 4px;
+        padding: 2px 8px;
+
+        p {
+            font-family: $roboto;
+            font-size: 12px;
+            font-weight: 500;
+            color: #1B6BAC;
+        }
+    }
+
+    .private {
+        background-color: #D6DFFF;
+
+        p {
+            color: #3359DF;
+        }
+    }
+}
+
+// viewed section styles start
+
+.viewed {
+    margin: 40px 0px;
+
+    .universities__items {
+        margin-top: 25px;
+    }
+}
+
+// admission tab styles start
+.tab__btns {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #bdcaeb40;
+
+    .tab__btn {
+        font-family: $sf;
+        font-weight: 600;
+        color: $tertiary-color;
+        padding: 24px 100px;
+        margin: 0px;
+        cursor: pointer;
+        position: relative;
+        transition: 0.2s;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0%;
+            right: 0%;
+            width: 0%;
+            height: 6px;
+            background-color: #c0e3ff;
+            border-radius: 4px 4px 0px 0px;
+            transition: 0.2s;
+        }
+
+        &:hover {
+            color: $primary-color;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    .react-tabs__tab--selected {
+        outline: 0px;
+        border: 0px;
+        color: $primary-color;
+
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+.admission__tab__single {
+    padding-top: 30px;
+
+    h4 {
+        color: #354455;
+        opacity: 0.7;
+        margin-bottom: 10px;
+    }
+}
+
+.admission__tab__items {
+    width: 100%;
+    max-width: 910px;
+
+    hr {
+        width: 90%;
+        opacity: 0.3;
+        background-color: #e4e4f7;
+        margin: 30px auto 0px;
+    }
+}
+
+.admission__tab__single__item {
+    padding: 20px 24px;
+    background: #fbfbff;
+    border: 1px solid #e4e4f7;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 8px;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+    }
+
+    h3 {
+        font-family: $sf;
+        color: $tertiary-color;
+        margin-bottom: 5px;
+    }
+
+    .primary-text {
+        font-size: 13px;
+    }
+
+    .location,
+    .time {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 8px;
+
+        svg {
+            margin-top: -2px;
+        }
+
+        p {
+            margin: 0px;
+            font-size: 15px;
+            color: $tertiary-color;
+            font-family: $sf;
+        }
+    }
+
+    .admission__tab__single__item__cta {
+        a {
+            padding: 12px 20px;
+            background: #fbfbff;
+            border: 1px solid $tertiary-color;
+            border-radius: 8px;
+
+            &:hover {
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+
+    .application__date,
+    .application__type {
+
+        p {
+            font-family: $roboto;
+            color: $tertiary-color;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: "...";
+        }
+
+        .secondary-text {
+            font-size: 14px;
+            color: #8a8a8a;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.admission__tab__single__item--secondary {
+
+    .location,
+    .time {
+        margin-top: 4px;
+
+        p {
+            color: #8a8a8a;
+        }
+    }
+}
+
+// saved section styles start
+
+.saved {
+    padding: 40px 30px;
+}
+
+.saved__container {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 30px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+}
+
+.saved__item {
+    width: 330px;
+
+    .universities__item {
+        width: 100%;
+    }
+
+    .universities__item__thumb {
+        position: relative;
+
+        .bookmark {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            background: #F2F8FD;
+            opacity: 0.5;
+            box-shadow: 2px 3px 11px 4px rgba(101, 110, 132, 0.23);
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            svg {
+                font-size: 24px;
+                color: #02547D;
+            }
+        }
+    }
+}
+
+.saved__item-active {
+    display: none;
+}
+
+
+// university details section styles start
+.university-details__banner {
+    position: relative;
+
+    .cover {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .back-home {
+        padding: 11px 18px;
+        background-color: $white;
+        box-shadow: 2px 4px 12px 4px rgba(101, 110, 132, 0.18);
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        transition: $primary-transition;
+
+        svg {
+            font-size: 20px;
+            color: $primary-color;
+        }
+
+        &:hover {
+            background-color: #f2f8fd;
+
+            svg {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .bookmark {
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #F2F8FD50;
+        box-shadow: 2px 3px 11px 4px rgba(101, 110, 132, 0.23);
+        border-radius: 4px;
+        position: absolute;
+        bottom: 36px;
+        right: 36px;
+
+        svg {
+            color: #02547D;
+            font-size: 20px;
+        }
+    }
+}
+
+.university-details__info-wrapper {
+    padding: 20px 24px 0px;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 70px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.university-details__single {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.university-details__info-logo {
+    @include box(122px);
+    box-shadow: 2px 3px 11px 4px rgba(101, 110, 132, 0.1);
+    border-radius: 4px;
+    background-color: $white;
+    margin-top: -44px;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.university-details__info-content {
+    h1 {
+        font-weight: 600;
+        color: $tertiary-color;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-family: $roboto;
+    }
+}
+
+.university-details__location {
+    margin-left: 70px;
+}
+
+.university-details__location-icons {
+    @include box(40px);
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: 2px 3px 11px 4px rgba(101, 110, 132, 0.1);
+
+    svg {
+        font-size: 24px;
+        color: $primary-color;
+    }
+}
+
+.university-details__location-content {
+    h3 {
+        color: $tertiary-color;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    p {
+        max-width: 170px;
+        font-family: $roboto;
+    }
+}
+
+.university-details__type {
+    align-items: center;
+
+    h3 {
+        margin: 0px;
+    }
+}
+
+// university requirenmensts styles
+.university-requirements {
+    padding: 50px 32px 24px;
+    border-bottom: 1px solid #BDCAEB;
+}
+
+.form-group {
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: #354455;
+    }
+
+    .select-group {
+        width: 100%;
+        min-width: 280px;
+        max-width: 280px;
+        position: relative;
+
+        svg {
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 16px;
+            margin-top: -3px;
+        }
+    }
+
+    select {
+        appearance: none;
+        padding: 11px 36px 11px 16px;
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #A2A2B8;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #354455;
+        position: relative;
+
+        &:focus {
+            box-shadow: 0px 0px 0px;
+            outline: 0px;
+        }
+    }
+
+}
+
+.form-group-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    .form-group-btn {
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        background: #FFFFFF;
+        border: 1px solid #02547D;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 590;
+        color: #02547D;
+
+        &:hover {
+            background: #F2F8FD;
+        }
+    }
+}
+
+.empty {
+    padding: 0px 32px;
+
+    .empty-content {
+        padding: 150px 0px;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .about-university {
+        h1 {
+            margin-bottom: 10px;
+            color: #354455;
+        }
+
+        p {
+            max-width: 880px;
+            font-size: 18px;
+            color: #354455;
+        }
+    }
+
+}
+
+.university-info {
+    display: flex;
+    align-items: center;
+    column-gap: 54px;
+    row-gap: 30px;
+    // flex-wrap: wrap;
+    max-width: 1030px;
+    background: #F7F7FA;
+    border-radius: 8px;
+    padding: 20px 40px 20px 34px;
+    margin: 70px 0px 50px;
+
+    .thumb {
+        margin-top: -44px;
+    }
+
+    .content-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 90px;
+        flex-grow: 1;
+    }
+
+    .content {
+        max-width: 450px;
+
+        h2 {
+            font-size: 22px;
+            color: #354455;
+        }
+    }
+
+    .go-to-university {
+        padding: 16px 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 700;
+        color: #02547D;
+        gap: 8px;
+        background-color: $white;
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        min-width: 240px;
+        max-width: 240px;
+        flex-grow: 1;
+
+        &:hover {
+            background: #F2F8FD;
+        }
+
+        svg {
+            color: inherit;
+            font-size: 24px;
+        }
+    }
+}
+
+.requirements {
+    padding: 24px 8px 50px 0px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+.language {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 40px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.language__single {
+    padding: 16px 10px 8px;
+    background-color: $white;
+    border: 1px solid #D7D7E2;
+    box-shadow: 2px 3px 11px 4px rgba(101, 110, 132, 0.1);
+    border-radius: 4px;
+    text-align: center;
+    width: 138px;
+
+    p {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    h1 {
+        span {
+            font-size: 16px;
+        }
+    }
+}
+
+.requirements__content {
+    width: 100%;
+}
+
+.additional-requirements {
+    padding: 24px;
+    background: #F7F7FA;
+    border-radius: 8px;
+    margin-top: 50px;
+    max-width: 930px;
+
+    .intro {
+        margin-bottom: 30px;
+
+        h2 {
+            margin-bottom: 12px;
+            color: #354455;
+            font-weight: 590;
+        }
+
+        p {
+            font-size: 18px;
+            color: #354455;
+            font-family: $sf;
+        }
+    }
+
+    li {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        color: #354455;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-family: $sf;
+
+        strong {
+            font-weight: 590;
+        }
+
+        &:nth-last-of-type(1) {
+            margin-bottom: -4px;
+        }
+
+        svg {
+            font-size: 20px;
+            color: #02547D;
+            margin-top: 3px;
+            min-width: 24px;
+        }
+    }
+}
+
+.requirements__cta {
+    flex-grow: 1;
+
+    a {
+        padding: 16px 10px;
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $sf;
+        font-size: 16px;
+        font-weight: 600;
+        background: #02547D;
+        border-radius: 8px;
+        color: $white;
+        margin-left: auto;
+
+        &:hover {
+            background-color: #1B6BAC;
+            color: $white;
+        }
+    }
+}
+
+.requirements__alt {
+    display: none;
+}
+
+// admission form section styles start
+.admission-form {
+    padding: 70px 0px;
+}
+
+
+.admission-form__wrapper {
+    @include center(750px);
+    background-color: $white;
+    border: 1px solid #E1E0E0;
+    box-shadow: 0px 3px 30px rgba(56, 82, 90, 0.12);
+    border-radius: 8px;
+    padding: 40px 16px;
+}
+
+.admission-form-group-wrapper {
+    @include center(430px);
+    text-align: left;
+}
+
+.form-group-wrap {
+    h1 {
+        font-size: 24px;
+        line-height: 34px;
+        color: #354455;
+    }
+
+    p {
+        font-size: 14px;
+        color: #9B9DA6;
+        margin-bottom: 24px;
+    }
+}
+
+.form-group-single {
+    margin-bottom: 24px;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+    }
+
+    label,
+    p {
+        font-size: 16px;
+        color: #354455;
+        margin: 0px;
+    }
+
+    label {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 4px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px 16px;
+        background: #FFFFFF;
+        border: 1px solid #A2A2B8;
+        border-radius: 4px;
+        font-size: 18px;
+        color: #354455;
+
+        &::placeholder {
+            color: #354455;
+        }
+    }
+}
+
+.form-group-single-radio {
+    .check-row {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        row-gap: 20px;
+        flex-wrap: wrap;
+
+        input,
+        label {
+            margin: 0px;
+        }
+
+        input {
+            width: auto;
+            display: none;
+        }
+
+        label {
+            width: 104px;
+            height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #FFFFFF;
+            border: 2px solid #EBEBED;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #354455;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .radio-label-active {
+            background: #02547D;
+            border: 2px solid rgba(155, 157, 166, 0.2);
+        }
+
+        input:checked+label {
+            background: #02547D;
+            border: 2px solid rgba(155, 157, 166, 0.2);
+            color: $white;
+        }
+    }
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+    width: 50%;
+}
+
+.form-wrapper {
+    padding: 0px 16px;
+}
+
+
+.form-container {
+    max-width: 750px;
+    margin: 160px auto;
+    padding: 60px 160px;
+    background: #FFFFFF;
+    border: 1px solid #E1E0E0;
+    box-shadow: 0px 3px 30px rgba(56, 82, 90, 0.12);
+    border-radius: 8px;
+
+    .form-group-intro {
+        margin-bottom: 40px;
+
+        h2 {
+            font-family: $roboto;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #354455;
+        }
+
+        p {
+            margin-top: 8px;
+            font-family: $roboto;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #9B9DA6;
+        }
+    }
+
+    hr {
+        max-width: 300px;
+        margin: 30px auto;
+        background-color: #BDCAEB;
+        opacity: 1;
+    }
+}
+
+.form-single__group {
+    margin-bottom: 24px;
+    max-width: 424px;
+
+    label,
+    p {
+        margin: 0px 0px 8px;
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        line-height: 16px;
+        color: #354455;
+    }
+
+    input,
+    textarea,
+    .react-select {
+        width: 100%;
+        display: block;
+        padding: 10px 16px;
+        margin: 0px;
+        background: #FFFFFF;
+        border: 1px solid #A2A2B8;
+        border-radius: 4px;
+        color: #354455;
+
+        &::placeholder {
+            color: #35445550;
+        }
+
+        &:focus {
+            border-color: #354455;
+        }
+    }
+
+    .react-selet__value-container {
+        padding: 11px 16px 12px !important;
+        cursor: pointer;
+    }
+
+    .react-selet__indicators {
+        cursor: pointer;
+    }
+
+    .react-selet__indicator-separator {
+        display: none;
+    }
+
+    .react-selet__control {
+        border-color: #A2A2B8 !important;
+        box-shadow: 0px 0px 0px !important;
+    }
+
+    .react-selet__placeholder {
+        color: #35445550;
+    }
+
+    .react-selet__single-value {
+        overflow: unset !important;
+    }
+
+    .react-selet__menu-list {
+        padding: 0px 0px;
+    }
+
+    .react-selet__option {
+        padding: 24px 16px;
+        transition: $primary-transition;
+        cursor: pointer;
+
+        &:hover {
+            color: #02547d;
+            background-color: #f2f8fd;
+        }
+    }
+
+    .react-selet__option--is-selected {
+        color: #02547d;
+        background-color: #f2f8fd;
+    }
+
+    .react-selet__value-container--has-value+.react-selet__indicators {
+        display: none;
+    }
+}
+
+.versity-info-confirm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+
+    .frm-btn {
+        font-size: 16px;
+        color: $white;
+        padding: 14px 40px;
+        background: #02547D;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12), inset -2px -3px 12px rgba(38, 38, 38, 0.25), inset 2px 3px 12px rgba(255, 255, 255, 0.25);
+        border-radius: 40px;
+        font-family: $roboto;
+        letter-spacing: 1px;
+        border: 1px solid #02547D;
+        min-width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $primary-transition;
+
+        &:hover {
+            background: #F2F8FD;
+            color: #02547D;
+        }
+    }
+
+    .frm-btn-two {
+        color: #02547D;
+        background-color: $white;
+        border: 1px solid #02547D;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+        border-radius: 40px;
+    }
+}
+
+
+.PhoneInput {
+    padding: 0px 16px;
+    border: 1px solid #A2A2B8;
+    border-radius: 4px;
+
+    input {
+        border: 0px;
+        border-radius: 0px;
+        padding: 10px 16px 10px 6px;
+    }
+
+    .PhoneInputCountryIcon {
+        border-radius: 3px;
+        margin-top: -3px;
+        box-shadow: 0px 0px 0px;
+    }
+
+    .PhoneInputCountryIconImg {
+        border-radius: 3px;
+
+    }
+
+    .PhoneInputCountry {
+        padding-right: 25px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 24px;
+            background-color: #EBEBED;
+        }
+    }
+
+    .PhoneInputCountrySelectArrow {
+        transform: rotate(0deg);
+        position: relative;
+        opacity: 1;
+        border: 0px;
+        margin-left: 8px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 0px;
+            border-width: 8px;
+            border-radius: 2px;
+            border-style: solid;
+            border-color: #9B9DA6 transparent transparent transparent;
+            transform: rotate(0deg);
+        }
+    }
+
+    .honeInputCountrySelect {
+        max-height: 400px;
+        overflow-y: auto;
+
+        option {
+            min-height: 30px;
+        }
+    }
+}
+
+.react-datepicker__header {
+    padding: 20px 40px !important;
+}
+
+.react-datepicker__day-names {
+    margin-top: 15px !important;
+}
+
+.react-datepicker__navigation {
+    top: 22px !important;
+}
+
+.input-img {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        user-select: none;
+    }
+}
+
+.react-datepicker__input-container {
+    cursor: pointer;
+}
+
+.form-single__group-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .form-single__group {
+        width: 50%;
+    }
+}
+
+.form-act {
+    width: 100%;
+    padding: 16px 20px;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: 1px solid #02547D;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #02547D;
+    margin-top: 20px;
+
+    &:hover {
+        border: 1px solid #02547D;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.score-meta {
+    font-size: 18px;
+    line-height: 21px;
+    color: #354455;
+    margin-bottom: 21px;
+}
+
+.frm-btn--alt {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    svg {
+        font-size: 20px;
+    }
+}
+
+
+.prev-btn {
+    width: 56px;
+    height: 32px;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 12px 4px rgba(101, 110, 132, 0.18);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 104px;
+    left: 264px;
+
+    &:focus,
+    &:active,
+    &:hover {
+        background: #FFFFFF;
+        box-shadow: 2px 4px 12px 4px rgba(101, 110, 132, 0.18);
+        border-radius: 4px;
+    }
+
+    svg {
+        font-size: 20px;
+    }
+}
+
+.PhoneInputCountrySelect {
+    height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 1199px) {
+    .prev-btn {
+        left: 204px;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+    .form-container {
+        padding: 60px 100px;
+    }
+
+    .form-single__group {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .prev-btn {
+        left: 16px;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    .form-container {
+        padding: 60px;
+    }
+
+    .form-single__group-wrapper {
+        flex-direction: column;
+        gap: 0px;
+
+        .form-single__group {
+            width: 100%;
+        }
+    }
+
+    .react-datepicker__header {
+        padding: 20px 18px !important;
+    }
+
+    .react-datepicker__navigation {
+        width: 20px !important;
+    }
+
+    .versity-info-confirm {
+        margin-top: 40px;
+    }
+
+    .PhoneInputCountrySelect {
+        left: -24px !important;
+    }
+
+    .PhoneInputCountrySelect {
+        height: 300px;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+
+    .form-container {
+        padding: 40px 20px;
+    }
+}
+
+
+// .pay-off {
+//     display: flex;
+//     align-items: center;
+// }
+
+// .createRow {
+//     display: flex;
+//     align-items: stretch;
+//     height: 100%;
+// }
+
+// .create__left,
+// .create__right {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .create__left {
+//     width: 100%;
+//     max-width: 680px;
+// }
+
+// .create__left-content {
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     padding: 60px 16px;
+//     background-image: url("../../public/assets/images/create-bg.png");
+//     background-size: cover;
+//     background-position: left bottom;
+//     background-repeat: no-repeat;
+
+//     h1 {
+        // font-family: $sf;
+        // font-weight: 700;
+        // font-size: 56px;
+        // line-height: 67px;
+        // letter-spacing: 0.05em;
+        // color: #354455;
+//     }
+
+//     h2 {
+        // font-weight: 700;
+        // font-size: 38px;
+        // line-height: 72px;
+        // letter-spacing: 0.04em;
+        // color: #354455;
+        // margin-left: 190px;
+        // margin-top: 20px;
+
+        // span {
+        //     font-size: 30px;
+        // }
+
+        // a {
+        //     font-family: "Yeseva One", cursive;
+        //     font-size: 56px;
+        //     color: #02547d;
+        //     font-weight: 400;
+        // }
+//     }
+// }
+
+// .create__right {
+//     width: 100%;
+//     height: 100%;
+// }
+
+// .create__right-content {
+//     padding: 60px 16px;
+//     max-width: 380px;
+//     margin: 0px auto;
+//     width: 100%;
+//     height: 800px;
+// }
+
+// .create__right-intro {
+//     margin-bottom: 40px;
+//     h3 {
+//         font-family: $sf;
+//         font-weight: 590;
+//         font-size: 24px;
+//         line-height: 26px;
+//         color: #354455;
+//         margin-bottom: 20px;
+
+//         a {
+//             font-family: "Yeseva One", cursive;
+//             color: #02547d;
+//             font-weight: 400;
+//         }
+//     }
+
+//     p {
+//         font-weight: 400;
+//         font-size: 16px;
+//         line-height: 16px;
+//         color: #9B9DA6;
+//         margin-bottom: 20px;
+//         a {
+//             padding-left: 5px;
+//             color: #02547d;
+//             font-weight: 700;
+//         }
+
+//         &:nth-last-of-type(1) {
+//             margin-bottom: 0px;
+//         }
+//     }
+// }
+
+/* ==== 
+ --------- (4.5) all sections styles end ---------
+ ==== */

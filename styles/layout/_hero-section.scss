@@ -1,0 +1,38 @@
+/* ==== 
+ --------- (4.2) hero section styles start ---------
+ ==== */
+
+.hero__container {
+  padding: 100px 100px 128px;
+  background-color: #8cd2f52b;
+  background-image: url('../../public/assets/images/hero-bg.png'), linear-gradient(to left, #ffffff, #8CD2F5);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left bottom;
+  box-shadow: inset -7px -7px 10px rgba(255, 255, 255, 0.33), inset 7px 7px 16px rgba(255, 255, 255, 0.25);
+}
+
+.hero__content {
+  text-align: end;
+
+  h1 {
+    font-family: $sf;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: $primary-color;
+  }
+}
+
+.hero__form {
+  margin-top: -16px;
+  padding: 0px 12px;
+}
+
+/* ==== 
+   --------- (4.2) hero section styles end ---------
+ ==== */

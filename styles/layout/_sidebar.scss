@@ -1,0 +1,189 @@
+/* ==== 
+ --------- (4.4) sidebar styles start ---------
+ ==== */
+
+.backdrop {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 0%;
+    height: 100vh;
+    background-color: transparent;
+    transition: 0.15s;
+    z-index: 999;
+
+    .close {
+        position: absolute;
+        top: 24px;
+        right: 17px;
+        font-size: 30px;
+        color: white;
+        display: none;
+        cursor: pointer;
+
+        @media only screen and (max-width: 767px) {
+            top: 23px;
+            right: 12px;
+        }
+    }
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 81px;
+    left: 0px;
+    bottom: 0px;
+    min-width: 236px;
+    max-width: 236px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: $quinary-color;
+    box-shadow: 2px 0px 0px rgba(0, 0, 0, 0.1);
+
+    .navbar__brand__text {
+        padding: 25px 24px;
+        width: 100%;
+        display: none;
+    }
+
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+        width: 3px;
+    }
+
+}
+
+.sidebar__item__link {
+    display: flex;
+    align-items: center;
+    font-family: $sf;
+    padding: 16px 24px;
+    font-weight: 700;
+    color: $secondary-color;
+    transition: $primary-transition;
+
+    span {
+        margin: 0px;
+        line-height: inherit;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    svg {
+        font-size: 24px;
+        color: #bcbec9;
+        transition: $primary-transition;
+    }
+
+    &:hover {
+        color: $primary-color;
+        background-color: #f2f8fd;
+
+        svg {
+            color: inherit;
+        }
+    }
+}
+
+.sidebar__item__link__active {
+    color: $primary-color;
+    background-color: #f2f8fd;
+
+    svg {
+        color: inherit;
+    }
+}
+
+.sidebar-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-right: 13px;
+
+    &:hover {
+        background-color: #F2F8FD;
+
+        a,
+        svg {
+            color: #02547D;
+        }
+    }
+
+    .navbar__dropdown__arrow {
+        font-size: 24px;
+        color: #9B9DA6;
+        cursor: pointer;
+        transition: $primary-transition;
+
+        &:hover {
+            color: #02547D;
+        }
+    }
+
+    .navbar__dropdown__arrow-active {
+        transform: rotate(180deg);
+    }
+}
+
+.sidebar-dropdown-wrapper {
+    border: 1px solid #E1E1E1;
+    border-left: 0px;
+    border-right: 0px;
+    display: none;
+}
+
+.sidebar-profile {
+    padding: 16px 13px;
+    flex-grow: 1;
+    color: #9B9DA6;
+    font-family: $sf;
+    font-weight: 700;
+}
+
+.sidebar-dropdown-item {
+    display: none;
+}
+
+.sidebar-dropdown-item-active {
+    display: block;
+    animation: slide 0.3s;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+.sidebar-dropdown-link {
+    padding: 13px 12px 13px 58px;
+    color: #9B9DA6;
+    width: 100%;
+    font-family: $sf;
+    font-weight: 700;
+
+    &:hover {
+        background-color: #F2F8FD;
+        color: #02547D;
+    }
+
+    svg {
+        font-size: 30px;
+    }
+}
+
+
+/* ==== 
+ --------- (4.4) sidebar styles end ---------
+ ==== */
