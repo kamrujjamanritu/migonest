@@ -121,7 +121,7 @@ const Preference = () => {
                   formStepp === 2 ? <div className="prefer-group">
                     <p className='tracker'>3<span>/4</span></p>
                     <div className="p-grp-int">
-                      <h5>WWhich field of study are you interested in?</h5>
+                      <h5>Which field of study are you interested in?</h5>
                       <p>You can choose only one field</p>
                     </div>
                     <div className="p-input-grp">
